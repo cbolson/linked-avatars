@@ -1,34 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Responsive Linked avatars</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
     <script src="scripts.js" defer></script>
-</head>
-<body>
-    <div class="avatar" style="--pos-x: 5%; --pos-y:5%;">
-  <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODYyMTQ3NjV8&ixlib=rb-4.0.3&q=85">
-  <div class="avatar-title">Maria</div>
-</div>
-<div class="avatar" style="--pos-x: 20%; --pos-y:20%;">
-  <img src="https://images.unsplash.com/photo-1612213467906-20440d15bdb8?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODYyMTQ3NjV8&ixlib=rb-4.0.3&q=85">
-  <div class="avatar-title">Ranón</div>
-</div>
-<div class="avatar" style="--pos-x: 80%; --pos-y:10%;">
-  <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODYyMTQ5MTN8&ixlib=rb-4.0.3&q=85">
-  <div class="avatar-title left">Isabel</div>
-</div>
-<div class="avatar " style="--pos-x: 60%; --pos-y:30%;">
-  <img src="https://images.unsplash.com/photo-1611695434398-4f4b330623e6?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODYyMTQ5Mjd8&ixlib=rb-4.0.3&q=85">
-  <div class="avatar-title left">David</div>
-</div>
-<div class="avatar" style="--pos-x: 10%; --pos-y:50%;">
-  <img src="https://images.unsplash.com/photo-1596243651159-908a16206cab?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODYyMTQ5Mjd8&ixlib=rb-4.0.3&q=85">
-  <div class="avatar-title">Yvonne</div>
-</div>
-<svg id="svg-lines"></svg>
-</body>
+  </head>
+  <body>
+    <div class="avatar" style="--pos-x: 5%; --pos-y: 5%">
+      <img
+        class="avatar__profile"
+        src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?crop=entropy&cs=srgb&fm=jpg&w=200&&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODYyMTQ3NjV8&ixlib=rb-4.0.3&q=85" />
+      <div class="avatar__data">
+        <h2>Maria</h2>
+        <div class="social">
+          <a href="#"><img src="assets/icons8-facebook.svg" /></a>
+          <a href="#"><img src="assets/icons8-twitter-circled.svg" /></a>
+        </div>
+      </div>
+    </div>
+    <div class="avatar" style="--pos-x: 20%; --pos-y: 20%">
+      <img
+        class="avatar__profile"
+        src="https://images.unsplash.com/photo-1612213467906-20440d15bdb8?crop=entropy&cs=srgb&fm=jpg&w=200&&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODYyMTQ3NjV8&ixlib=rb-4.0.3&q=85" />
+      <div class="avatar__data">
+        <h2>Simon</h2>
+        <div class="social">
+          <a href="#"><img src="assets/icons8-facebook.svg" /></a>
+          <a href="#"><img src="assets/icons8-linkedin.svg" /></a>
+          <a href="#"><img src="assets/icons8-twitter-circled.svg" /></a>
+        </div>
+      </div>
+    </div>
+    <div class="avatar" style="--pos-x: 80%; --pos-y: 10%">
+      <img
+        class="avatar__profile"
+        src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?crop=entropy&cs=srgb&fm=jpg&w=200&&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODYyMTQ5MTN8&ixlib=rb-4.0.3&q=85" />
+      <div class="avatar__data left">
+        <h2>Elizabeth</h2>
+        <div class="social">
+          <a href="#"><img src="assets/icons8-facebook.svg" /></a>
+          <a href="#"><img src="assets/icons8-linkedin.svg" /></a>
+        </div>
+      </div>
+    </div>
+    <div class="avatar" style="--pos-x: 60%; --pos-y: 30%">
+      <img
+        class="avatar__profile"
+        src="https://images.unsplash.com/photo-1611695434398-4f4b330623e6?crop=entropy&cs=srgb&fm=jpg&w=200&&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODYyMTQ5Mjd8&ixlib=rb-4.0.3&q=85" />
+      <div class="avatar__data">
+        <h2>David</h2>
+        <div class="social">
+          <a href="#"><img src="assets/icons8-facebook.svg" /></a>
+          <a href="#"><img src="assets/icons8-linkedin.svg" /></a>
+          <a href="#"><img src="assets/icons8-twitter-circled.svg" /></a>
+        </div>
+      </div>
+    </div>
+    <div class="avatar" style="--pos-x: 10%; --pos-y: 50%">
+      <img
+        class="avatar__profile"
+        src="https://images.unsplash.com/photo-1596243651159-908a16206cab?crop=entropy&cs=srgb&fm=jpg&w=200&&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODYyMTQ5Mjd8&ixlib=rb-4.0.3&q=85" />
+      <div class="avatar__data">
+        <h2>Rebbeca</h2>
+        <div class="social">
+          <a href="#"><img src="assets/icons8-facebook.svg" /></a>
+          <a href="#"><img src="assets/icons8-linkedin.svg" /></a>
+          <a href="#"><img src="assets/icons8-twitter-circled.svg" /></a>
+        </div>
+      </div>
+    </div>
+    <svg id="svg-lines"></svg>
+  </body>
 </html>

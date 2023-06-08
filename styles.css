@@ -1,7 +1,14 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+img {
+  display: block;
+  max-width: 100%;
 }
 body {
+  font-size: 1rem;
   background: #541ac8;
   height: 100vh;
   display: grid;
@@ -33,30 +40,7 @@ body {
   inset: var(--pos-y) 0 0 var(--pos-x);
   isolation: isolate;
 }
-.avatar-title {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  padding: 2rem;
-  border-radius: 50px;
-  display: grid;
-  place-items: center end;
-  z-index: -1;
-  background: #ffffff;
-
-  transition: width 300ms ease-in-out, border-radius 300ms ease-in-out;
-}
-.avatar-title.left {
-  right: 0;
-  left: auto;
-  place-items: center start;
-}
-.avatar:hover .avatar-title {
-  width: 200%;
-}
-.avatar img {
+.avatar .avatar__profile {
   border: 4px solid #fff;
   position: absolute;
   width: 100%;
@@ -65,10 +49,58 @@ body {
   border-radius: 50%;
   display: block;
 }
+.avatar__data {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+  z-index: -1;
+  background: #ffffff;
+  opacity: 0;
+  transition: all 300ms ease-in-out;
+}
+.avatar__data.left {
+  right: 0;
+  left: auto;
+}
+.avatar__data > * {
+  width: 100px;
+  margin-left: auto;
+}
+/* slide out to left */
+.avatar__data.left > * {
+  margin-right: auto;
+  margin-left: 0;
+}
 
-/* not part of the brief but just testing a mobile view idea */
-@media (max-width: 500px) {
-  .avatar {
-    /* position: static; */
-  }
+.avatar:hover .avatar__data {
+  width: 220%;
+  opacity: 1;
+}
+
+.avatar__data h2 {
+  font-weight: medium;
+  font-size: 1rem;
+  white-space: nowrap;
+}
+.avatar__data .social {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.avatar__data .social img {
+  width: 24px;
+  aspect-ratio: 1;
+  transition: scale 150ms ease-out;
+}
+.avatar__data .social img:hover {
+  scale: 1.1;
 }
