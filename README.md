@@ -1,6 +1,7 @@
 # linked-avatars
+
 Responsive linked avatars
 
-[demo](https://codepen.io/cbolson/pen/rNQaxJx)
+See the [demo](https://linked-avatars.netlify.app/)
 
-[Icons8](https://icons8.com)
+- Social icons from [Icons8](https://icons8.com)
